@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="A gentle reminder to make room for the little things that make a life.">
+  <title>Little by Little — Notes on life</title>
+  <style>
+    :root { color-scheme: light; --ink:#25352d; --muted:#6d786e; --paper:#f5f2eb; --green:#dce7d9; --accent:#bd6f4d; --line:#d8d9ce; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family: Georgia, 'Times New Roman', serif; }
+    a { color:inherit; }
+    .page { width:min(1120px, calc(100% - 48px)); margin:auto; }
+    header { height:88px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); font-family:Arial,sans-serif; }
+    .brand { text-decoration:none; font-size:14px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+    nav { display:flex; gap:30px; }
+    nav a { color:var(--muted); font-size:13px; text-decoration:none; }
+    nav a:hover, nav a:focus-visible { color:var(--accent); }
+    .hero { min-height:610px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:7%; padding:68px 0 84px; }
+    .eyebrow { margin:0 0 22px; color:var(--accent); font:700 11px/1.4 Arial,sans-serif; letter-spacing:.17em; text-transform:uppercase; }
+    h1 { max-width:600px; margin:0; font-size:clamp(58px, 8vw, 100px); font-weight:400; letter-spacing:-.065em; line-height:.98; }
+    h1 em { color:#71866f; font-weight:400; }
+    .intro { max-width:400px; margin:27px 0 32px; color:var(--muted); font:16px/1.8 Arial,sans-serif; }
+    .button { display:inline-flex; align-items:center; gap:18px; padding:14px 18px; border:1px solid var(--ink); text-decoration:none; font:700 12px Arial,sans-serif; letter-spacing:.04em; transition:background .2s,color .2s; }
+    .button:hover, .button:focus-visible { background:var(--ink); color:var(--paper); }
+    .button span { font-size:17px; }
+    .art { position:relative; min-height:390px; display:grid; place-items:center; overflow:hidden; background:#dce5d5; border-radius:48% 48% 3px 3px; }
+    .sun { position:absolute; width:100px; height:100px; top:14%; right:19%; background:#e9ba81; border-radius:50%; }
+    .hill { position:absolute; bottom:-20%; width:120%; height:57%; border-radius:50% 50% 0 0; }
+    .hill.one { left:-30%; background:#879a79; transform:rotate(-9deg); }
+    .hill.two { right:-43%; bottom:-28%; background:#647c69; transform:rotate(13deg); }
+    .path { position:absolute; bottom:-21%; left:44%; width:32%; height:61%; background:#e8ddc5; border-radius:50% 50% 0 0; transform:rotate(12deg); }
+    .art-note { position:absolute; top:28px; left:28px; color:#536651; font:11px Arial,sans-serif; letter-spacing:.11em; text-transform:uppercase; }
+    .quote { display:grid; grid-template-columns:1fr 2fr; gap:36px; padding:48px 0 56px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .quote-label { color:var(--accent); font:700 11px/1.5 Arial,sans-serif; letter-spacing:.14em; text-transform:uppercase; }
+    blockquote { max-width:700px; margin:0; font-size:clamp(25px, 3.6vw, 42px); line-height:1.28; letter-spacing:-.025em; }
+    blockquote small { display:block; margin-top:22px; color:var(--muted); font:12px Arial,sans-serif; letter-spacing:.04em; }
+    .moments { padding:82px 0 86px; }
+    .moments h2 { margin:0 0 37px; font-size:clamp(34px,5vw,54px); font-weight:400; letter-spacing:-.04em; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { min-height:190px; padding:25px; border:1px solid var(--line); }
+    .card .number { color:var(--accent); font:12px Arial,sans-serif; }
+    .card h3 { margin:27px 0 10px; font-size:23px; font-weight:400; }
+    .card p { max-width:260px; margin:0; color:var(--muted); font:13px/1.7 Arial,sans-serif; }
+    footer { display:flex; justify-content:space-between; gap:16px; padding:24px 0 30px; border-top:1px solid var(--line); color:var(--muted); font:12px Arial,sans-serif; }
+    @media (max-width:700px) {
+      .page { width:min(100% - 36px, 540px); }
+      header { height:72px; }
+      nav { gap:17px; }
+      nav a { font-size:12px; }
+      .hero { min-height:0; grid-template-columns:1fr; gap:38px; padding:62px 0 66px; }
+      h1 { font-size:clamp(58px, 15vw, 82px); }
+      .intro { margin:22px 0 26px; }
+      .art { min-height:310px; }
+      .quote { grid-template-columns:1fr; gap:18px; padding:36px 0 42px; }
+      .moments { padding:62px 0; }
+      .cards { grid-template-columns:1fr; gap:12px; }
+      .card { min-height:auto; padding:22px; }
+      .card h3 { margin:20px 0 8px; }
+    }
+    @media (max-width:380px) { nav { gap:11px; } nav a { font-size:11px; } .brand { font-size:12px; } footer { flex-direction:column; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="#top">Little by Little</a>
+      <nav aria-label="Main navigation">
+        <a href="#note">A note</a>
+        <a href="#moments">The little things</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">A small thought for today</p>
+          <h1 id="hero-title">Life happens <em>in between.</em></h1>
+          <p class="intro">In the slow mornings, the familiar walk home, the laughter that catches you by surprise. A life is made of these little, ordinary things.</p>
+          <a class="button" href="#note">Take a breath <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="art" role="img" aria-label="A warm sun over quiet green hills">
+          <span class="art-note">Somewhere, at your own pace</span>
+          <span class="sun"></span><span class="hill one"></span><span class="hill two"></span><span class="path"></span>
+        </div>
+      </section>
+      <section class="quote" id="note" aria-labelledby="note-title">
+        <div class="quote-label" id="note-title">A note to keep</div>
+        <blockquote>“You don’t have to have it all figured out to be right where you need to be.”<small>— A gentle reminder</small></blockquote>
+      </section>
+      <section class="moments" id="moments" aria-labelledby="moments-title">
+        <p class="eyebrow">Notice what’s already here</p>
+        <h2 id="moments-title">The little things count.</h2>
+        <div class="cards">
+          <article class="card"><span class="number">01 / PAUSE</span><h3>A quiet cup</h3><p>Let the first sip be the only thing you need to do for a moment.</p></article>
+          <article class="card"><span class="number">02 / CONNECT</span><h3>Someone who gets it</h3><p>Send the message. Make the call. Share the story you keep saving.</p></article>
+          <article class="card"><span class="number">03 / BEGIN</span><h3>One small next step</h3><p>There is no perfect time to start. There is just the next kind thing.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer><span>Little by Little</span><span>Make room for the moments.</span></footer>
+  </div>
+</body>
+</html>
